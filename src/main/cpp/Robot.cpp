@@ -117,6 +117,10 @@ public:
 
     void AutonomousInit() override
     {  
+        NamedCommands::registerCommand("1_command",  frc2::cmd::Print("1_command"));
+        NamedCommands::registerCommand("2_command",  frc2::cmd::Print("2_command"));
+        NamedCommands::registerCommand("3_command",  frc2::cmd::Print("3_command"));
+
         path = create_path_from_json();
         controller = create_controller();
 
