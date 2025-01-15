@@ -142,7 +142,7 @@ public:
             )
         );
 
-        this->follow_path_command->Initialize();
+        this->follow_path_command->Schedule();
         
     }
 
@@ -153,6 +153,11 @@ public:
     }
 
     void TeleopPeriodic() override { }
+
+    void RobotPeriodic()
+    {
+         frc2::CommandScheduler::GetInstance().Run();
+    }
 
 private:
     Drivetrain m_swerve;
