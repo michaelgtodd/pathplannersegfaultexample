@@ -148,7 +148,6 @@ public:
 
     void AutonomousPeriodic() override
     {
-        this->follow_path_command->Execute();
         m_swerve.Drive_Commanded();
     }
 
